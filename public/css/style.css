@@ -1,0 +1,96 @@
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #333333;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+header,nav,article,section,aside,footer{display:block;}
+body, button, input, select, textarea {
+    font: 12px/1.5 "微软雅黑","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"宋体";
+}
+input, select, textarea {
+    font-size: 100%;
+}
+input {
+    background:no-repeat 0 0 scroll ;
+    border:none;
+    outline:medium;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0 none;
+}
+iframe {
+    display: block;
+}
+ol, ul {
+    list-style: none outside none; 
+    list-style-type: none;
+} 
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+    font-weight: 500;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 16px;
+}
+h3, h4, h5, h6 {
+    font-size: 14px;
+}
+img{
+    border: 0;
+}
+a{
+    text-decoration: none;
+}
+.clear{
+    clear: both;
+}
+.float_left{
+    display: inline;
+    float: left;
+}
+.float_right{
+    display: inline;
+    float: right;
+}
+.inline_block{
+    display: inline-block;
+}
+
+.position_re{
+    position: relative;
+}
+.text_center{
+    text-align: center;
+}
+.show_center{
+    margin-left: auto;
+    margin-right: auto;
+}
+.text_right{
+    text-align: right;
+}
+.block{
+    display: block;
+}
+.inline{
+    display: inline;
+}
+.display_none {
+    display: none;
+}
+a:focus{outline:none;}
+button, img{outline:none;}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="text/html; charset=GBK" http-equiv="Content-Type">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="-1" http-equiv="Expires">
+    <meta content="no-cache" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="Pragma">
+    <title>砸蛋大抽奖</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/eggFrenzy.css">
+    <script type="text/javascript" src="public/js/jquery.min.js"></script> 
+    <script type="text/javascript" src="public/js/scroll.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="public/js/eggFrenzy.js"></script>
+    <script type="text/javascript" charset="utf-8" src="public/js/jquery-ui-1.10.4.js"></script> 
+    <script>
+        $(function(){ 
+            //初始化参数  animationCount:动画执行次数
+            //           prizeItemList:奖品  url为奖品项目图片名，link奖品跳转的连接
+            //           prizeItemList[0] 表示未中奖，后面是奖品
+            var option = {  "animationCount":2,
+                            "prizeItemList":[
+                                {"url":"jp0.png","link":null},
+                                {"url":"jp1.png","link":"link1"},
+                                {"url":"jp2.png","link":"link2"},
+                                {"url":"jp3.png","link":"link3"},
+                                {"url":"jp4.png","link":"link4"},
+                                {"url":"jp5.png","link":"link5"},
+                                {"url":"jp6.png","link":"link6"},
+                                {"url":"jp7.png","link":"link7"},
+                                {"url":"jp8.png","link":"link8"}
+                            ]
+                        };
+
+            var e = new EggPlugin(option);
+            //绑定抽奖
+            $('body').on('click','.eggFrenzy_sec12_egg1 ul li',function(){
+                e.Init($(this));
+            }); 
+        });
+    </script>
+</head>
+<body id="eggFrenzy">
+    <header id="eggFrenzy_header"><img src="public/images/header.png"></header>
+    <section id="eggFrenzy_sec1">
+        <p class="text_center eggFrenzy_sec11"><span class="eggeggFrenzy_sec1_tips">今日剩余<span id="eggC">0</span>次免费机会</span></p>
+        <div class="eggFrenzy_sec12">
+            <div class="eggFrenzy_sec12_egg1">
+                <ul class="float_left">
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="eggFrenzy_sec12_egg1">
+                <ul class="float_left">
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                    <li class="action"><img src="public/images/egg0.png"></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <p class="eggFrenzy_sec13">免费抽奖</p>
+    </section>
+    <section id="eggFrenzy_sec2">
+        <div class="eggFrenzy_sec21">
+            <img class="eggFrenzy_sec21_title float_left" src="public/images/jp.png">
+            <div class="float_left eggFrenzy_sec21_con">
+                <ul>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp1.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">200元红包</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp2.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">10元话费</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp3.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">100元红包</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp4.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">神秘礼包</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp5.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">88元话费</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp6.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">kindle</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp7.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">1G流量</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <img src="public/images/jp8.png">
+                        </div>
+                        <p class="eggFrenzy_sec21_p">10G流量</p>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="eggFrenzy_sec22">
+            <div class="eggFrenzy_sec22-d1">
+                <div class="eggFrenzy_sec22-d2"></div>
+            </div>
+        </div>
+    </section>
+    <section id="eggFrenzy_sec3">
+        <div class="eggFrenzy_sec31"><img src="public/images/tw1.png"></div>
+        <div class="eggFrenzy_sec32">
+            <div class="eggFrenzy_sec321">
+                <img src="public/images/tt1.png">
+                <span class="egg-font">活动规则</span>
+                <img src="public/images/tt2.png">
+            </div>
+            <div class="eggFrenzy_sec322">
+                <p class="egg-font1">努力了一年，领个红包犒劳一下自己吧~</p>
+                <p class="egg-font1">参与活动即有机会获得<span class="egg-_red">幸运奖</span>~每天可参与<span class="egg-_red">8</span>次，8次抽奖机会免费。</p>
+                <p class="egg-font2">(此活动为概率中奖，奖品数量有限，祝您好运！)</p>
+                <p class="egg-font1"><span class="egg-_red">惊喜一：</span>200元支付宝红包<br>
+                    <span class="egg-_red">惊喜二：</span>100元支付宝红包<br>
+                    <span class="egg-_red">惊喜三：</span>10元话费<br>
+                    <span class="egg-_red">惊喜四：</span>1元支付宝红包<br>
+                    <span class="egg-_red">惊喜五：</span>幸运奖
+                </p>
+                <p class="egg-font1">重要声明：<br>
+                    1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待。<br>
+                    2、优惠券类奖品的使用规则详见每个优惠券的介绍页。<br>
+                    3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-006-6855或客服QQ：4000066855（工作日9:00至18:00）。<br>
+                    4、通过非法途径获得奖品的，主办方有权不提供奖品。
+                </p>
+                <p class="egg-font2 egg_gl">中奖概率说明︶</p>
+            </div>
+            
+        </div>
+        <div class="eggFrenzy_sec31"><img src="public/images/tw3.png"></div>
+    </section>
+    <section id="eggFrenzy_sec4">
+        <div class="eggFrenzy_sec41">
+            <img src="public/images/more.png">
+        </div>
+        <div class="eggFrenzy_sec42">
+            <img src="public/images/footer.png">
+        </div>
+    </section>
+    <div id="containment-wrapper">
+      <div id="draggable3" class="draggable ui-widget-content">
+        <p>I'm contained within the box</p>
+      </div>
+   </div>
+</body>
+</html>
