@@ -33,9 +33,8 @@ iframe {
     display: block;
 }
 ol, ul {
-    list-style: none outside none; 
-    list-style-type: none;
-} 
+    list-style: none outside none;
+}
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
     font-weight: 500;
@@ -94,3 +93,6 @@ a{
 }
 a:focus{outline:none;}
 button, img{outline:none;}
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}

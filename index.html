@@ -16,36 +16,39 @@
     <script type="text/javascript" src="public/js/jquery.min.js"></script> 
     <script type="text/javascript" src="public/js/scroll.js"></script> 
     <script type="text/javascript" charset="utf-8" src="public/js/eggFrenzy.js"></script>
-    <script type="text/javascript" charset="utf-8" src="public/js/jquery-ui-1.10.4.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="public/js/jquery-ui.js"></script> 
     <script>
         $(function(){ 
             //初始化参数  animationCount:动画执行次数
             //           prizeItemList:奖品  url为奖品项目图片名，link奖品跳转的连接
             //           prizeItemList[0] 表示未中奖，后面是奖品
-            var option = {  "animationCount":2,
+            var option = {  
+                            "lastCount":8,
+                            "animationCount":3,
                             "prizeItemList":[
-                                {"url":"jp0.png","link":null},
-                                {"url":"jp1.png","link":"link1"},
-                                {"url":"jp2.png","link":"link2"},
-                                {"url":"jp3.png","link":"link3"},
-                                {"url":"jp4.png","link":"link4"},
-                                {"url":"jp5.png","link":"link5"},
-                                {"url":"jp6.png","link":"link6"},
-                                {"url":"jp7.png","link":"link7"},
-                                {"url":"jp8.png","link":"link8"}
+                                {"name":"未中奖","url":"jp0.png","link":"#"},
+                                {"name":"10元话费","url":"tc1.png","link":"https://www.licaifan.com/index.php/site/promotion/?refer=753 "},
+                                {"name":"200元支付宝红包","url":"tc2.png","link":"http://m.xiangshang360.com/wap/regist/landingpage?source=ceshi1"},
+                                {"name":"100元支付宝红包","url":"tc3.png","link":"https://m.we.com/mo/lp/lp/depository?utmSource=wap-bd-tdb"},
+                                {"name":"1元支付宝红包","url":"tc4.png","link":"https://www.zyxr.com/wapactivity/activity/activityKuayear.html?chl=ryt"},
+                                {"name":"88元话费","url":"tc5.png","link":"https://m.xueshandai.com/landing-page/landing-progress?sid=ytws"},
+                                {"name":"Kindle","url":"tc6.png","link":"http://www.miaoqian.com/register/regwap.html?channelCategory=ayd"},
+                                {"name":"1G流量","url":"tc7.png","link":"http://m.haochedai.com/hcd113/index.html"},
+                                {"name":"10G流量","url":"tc8.png","link":"https://www.51rz.com/ind/wx/tg/register.html?channel=wap-ytws1"}
                             ]
                         };
 
             var e = new EggPlugin(option);
             //绑定抽奖
-            $('body').on('click','.eggFrenzy_sec12_egg1 ul li',function(){
+            $('.eggFrenzy_sec12_egg1 ul li').on('click',function(){
                 e.Init($(this));
             }); 
         });
     </script>
 </head>
-<body id="eggFrenzy">
-    <header id="eggFrenzy_header"><img src="public/images/header.png"></header>
+<body>
+    <header id="eggFrenzy_header"><img src="public/images/header.png">
+    <a id="imglink" href="javascript:void(0);"><img id="eggFrenzy_header_j" src="public/images/title.png"></a></header>
     <section id="eggFrenzy_sec1">
         <p class="text_center eggFrenzy_sec11"><span class="eggeggFrenzy_sec1_tips">今日剩余<span id="eggC">0</span>次免费机会</span></p>
         <div class="eggFrenzy_sec12">
@@ -77,49 +80,49 @@
                 <ul>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp1.png">
-                        </div>
-                        <p class="eggFrenzy_sec21_p">200元红包</p>
-                    </li>
-                    <li>
-                        <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp2.png">
+                            <a href="https://www.licaifan.com/index.php/site/promotion/?refer=753   "><img src="public/images/jp1.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">10元话费</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp3.png">
+                            <a href="http://m.xiangshang360.com/wap/regist/landingpage?source=ceshi1"><img src="public/images/jp2.png"></a>
+                        </div>
+                        <p class="eggFrenzy_sec21_p">200元红包</p>
+                    </li>
+                    <li>
+                        <div class="eggFrenzy_sec21_d">
+                            <a href="https://m.we.com/mo/lp/lp/depository?utmSource=wap-bd-tdb"><img src="public/images/jp3.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">100元红包</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp4.png">
+                            <a href="https://www.zyxr.com/wapactivity/activity/activityKuayear.html?chl=ryt"><img src="public/images/jp4.png"></a>
                         </div>
-                        <p class="eggFrenzy_sec21_p">神秘礼包</p>
+                        <p class="eggFrenzy_sec21_p">1元红包</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp5.png">
+                            <a href="https://m.xueshandai.com/landing-page/landing-progress?sid=ytws"><img src="public/images/jp5.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">88元话费</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp6.png">
+                            <a href="http://www.miaoqian.com/register/regwap.html?channelCategory=ayd"><img src="public/images/jp6.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">kindle</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp7.png">
+                            <a href="http://m.haochedai.com/hcd113/index.html"><img src="public/images/jp7.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">1G流量</p>
                     </li>
                     <li>
                         <div class="eggFrenzy_sec21_d">
-                            <img src="public/images/jp8.png">
+                            <a href=""><img src="public/images/jp8.png"></a>
                         </div>
                         <p class="eggFrenzy_sec21_p">10G流量</p>
                     </li>
@@ -158,7 +161,6 @@
                     3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-006-6855或客服QQ：4000066855（工作日9:00至18:00）。<br>
                     4、通过非法途径获得奖品的，主办方有权不提供奖品。
                 </p>
-                <p class="egg-font2 egg_gl">中奖概率说明︶</p>
             </div>
             
         </div>
@@ -169,13 +171,8 @@
             <img src="public/images/more.png">
         </div>
         <div class="eggFrenzy_sec42">
-            <img src="public/images/footer.png">
+            <a href="https://engine.tuia.cn/index/activity?appKey=2JhNotkPaToVPDp41UzdsfkLRz5v&adslotId=322"><img src="public/images/footer.png"></a>
         </div>
     </section>
-    <div id="containment-wrapper">
-      <div id="draggable3" class="draggable ui-widget-content">
-        <p>I'm contained within the box</p>
-      </div>
-   </div>
 </body>
 </html>

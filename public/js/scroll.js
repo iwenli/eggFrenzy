@@ -1,4 +1,6 @@
-
+/**
+ * Created by Administrator on 2016/3/2.
+ */
 $(function() {
     var temp1 = $(".eggFrenzy_sec21_con");
     var temp2 = $(".eggFrenzy_sec21_con ul");
