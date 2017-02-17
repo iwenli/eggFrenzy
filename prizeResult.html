@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="text/html; charset=GBK" http-equiv="Content-Type">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="-1" http-equiv="Expires">
+    <meta content="no-cache" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="Pragma">
+    <title>我的奖品</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/eggFrenzy.css">
+    <script type="text/javascript" src="public/js/jquery.min.js"></script> 
+    <script>
+        $(function(){ 
+            //初始化参数  animationCount:动画执行次数
+            //           prizeItemList:奖品  url为奖品项目图片名，link奖品跳转的连接
+            //           prizeItemList[0] 表示未中奖，后面是奖品
+            var option = {  
+                            "mayPrize":[
+                                {"name":"10元话费","url":"jp1.png","link":"https://www.licaifan.com/index.php/site/promotion/?refer=753 "},
+                                {"name":"200元支付宝红包","url":"jp2.png","link":"http://m.xiangshang360.com/wap/regist/landingpage?source=ceshi1"},
+                                {"name":"100元支付宝红包","url":"jp3.png","link":"https://m.we.com/mo/lp/lp/depository?utmSource=wap-bd-tdb"},
+                                {"name":"1元支付宝红包","url":"jp4.png","link":"https://www.zyxr.com/wapactivity/activity/activityKuayear.html?chl=ryt"},
+                                {"name":"88元话费","url":"jp5.png","link":"https://m.xueshandai.com/landing-page/landing-progress?sid=ytws"},
+                                {"name":"Kindle","url":"jp6.png","link":"http://www.miaoqian.com/register/regwap.html?channelCategory=ayd"},
+                                {"name":"1G流量","url":"jp7.png","link":"http://m.haochedai.com/hcd113/index.html"},
+                                {"name":"10G流量","url":"jp7.png","link":"https://www.51rz.com/ind/wx/tg/register.html?channel=wap-ytws1"}
+                            ]
+                        };
+           var str = '<ul>';
+                option.mayPrize.forEach(function(i) {
+                    str += '<li> ';
+                    str += '<div class="imgWrap"><img src="./public/images/'
+                    str += i.url;
+                    str += '" alt="';
+                    str += i.name
+                    str += '"></div>';
+                    str += '<div class="infoWrap">';
+                    str += '<span class="info"><b>恭喜您获得奖品';
+                    str += i.name
+                    str += '</b> </span>';
+                    str += '<span class="result gray">成功！</span>';
+                    str += '</div>';
+                    str += '<div class="inWrap gray"><a href="';
+                    str += i.link
+                    str += '"><div id="per"><div id="toRight"></div><div id="toRight2"></div></div></a></div>';
+                    str += '</li>';
+                }, this);
+               str += '</ul>';
+
+               $('#resultWrap').append(str);
+        });
+    </script>
+    <style>
+        #resultNav{width: 100%;height:40px;font-size: 1.1em;border-bottom:solid 1px #eee}
+        #resultNav a{display: block; padding-top: 10px; padding-left: 20px;} 
+        #resultWrap li{height: 100px;border-bottom:solid 1px #eee}
+        .imgWrap{display: inline-block;height: 100px;width: 120px;padding-top: 4px;margin: 0 auto; text-align: center;}
+        .imgWrap img{height:90px;/*border: solid 1px #eee;border-radius: 5px*/}
+        .infoWrap{position: absolute;display: inline-block;margin-top: 10px;height: 100px;width: 50%;min-width: 215px;}
+        .infoWrap span{display: block;margin-top: 10px;font-size: 1.1em}
+        .infoWrap .info{font-size: 1.16em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+        .inWrap{display: inline-block;float: right;padding-right: 20px; margin-top: 40px;font-size: 1.2em;}
+        .gray {color: #999;}
+
+        /*绘制箭头*/
+         #pre{position: absolute; }
+         #toRight{
+                    border: 10px solid #FFF;
+                    border-left-color:#999;
+          }
+          #toRight2 { 
+                            position: relative;
+                            top: -20px;
+                            left: -2px;
+                            width: 10px;
+                            border-top: 10px solid transparent;
+                            border-left: 10px solid #ffffff;
+                            border-bottom: 10px solid transparent;
+            } 
+    </style>
+</head>
+<body>
+    <nav id="resultNav">
+        <a href=""><返回</a>
+    </nav>
+    <section id="resultWrap">
+       
+    </section> 
+</body>
+</html>

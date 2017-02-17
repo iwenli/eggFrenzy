@@ -102,7 +102,7 @@
         str += '</div>';
         //禁用滚动条
         disableScrool(true);
-        $("#imglink").attr("href",prizeItemList[index].link);
+        $("#imglink").attr("href","prizeResult.html");
         $('body').append(str);
 
         if(index > 0)
